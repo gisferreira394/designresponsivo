@@ -1,0 +1,65 @@
+body{
+ background-color: rgb(192, 135, 81);
+ color: rgb(0, 0, 0);
+text-align: center;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.titulo{
+font-size: 40px;
+text-decoration: underline;
+
+}
+
+.imagem{
+/*border: 1px solid black;*/
+transform: scale(0.3) rotate(20deg);
+animation: piscar 0.5s infinite;
+}
+
+@keyframes piscar{
+0%{
+    opacity:0.1;
+    transform: scale(0,1);
+}
+
+10%{
+    opacity: 0.5;
+    transform: scale(1);
+}
+}
+
+.texto{
+text-align: justify;
+column-count: 3; 
+ column-gap: 40px ; /* espaçamento entre colunas */
+ line-height: 22px;/*espaçamento de linhas */
+}
+
+@media only screen and (max-width: 699px) and (min-width: 500){
+body{
+    /* background:darkblue */
+}
+
+.texto{
+    column-count:2;
+}
+
+.imagem{
+    transform: translateX(100px);
+}
+
+
+@media only screen and (max-width: 499px){
+    body{
+        background-color: rgb(255, 165, 149);
+    }
+    .imagem{display: none;
+    }
+}
+
+.texto{
+    column-count: 1;
+}
+}
+
